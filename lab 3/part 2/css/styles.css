@@ -4,10 +4,10 @@ html {
 
 /* Your CSS below here */
 
-.shadowbox {
+.box {
         font-size: 18px;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-        border-radius: 20px;
+        border-radius: 10px;
         width: 150px;
         border: 1px solid #333;
         padding: 80px 80px;
