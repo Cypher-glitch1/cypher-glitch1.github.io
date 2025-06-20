@@ -89,8 +89,8 @@ a {
 
 a[href*="http"] {
   padding-right: 19px;
-  background: url(external-link-52.png) no-repeat 100% 0;
-  background-size: 16px 16px;
+  background: url(external-link-52.png) no-repeat 100%;
+  background-size: 14px 14px;
 }
 
 a:visited {
