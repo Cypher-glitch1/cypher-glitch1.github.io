@@ -31,19 +31,21 @@ function result() {
   const yItem = randomValueFromArray(placeY);
   const zItem = randomValueFromArray(insertZ);
 
-  newstory = newstory.replaceAll(':insertx:',xItem);
-  newstory = newstory.replaceAll(':insertx:',yItem);
-  newstory = newstory.replaceAll(':insertx:',zItem);
+  newstory = newstory.replaceAll('insertx',xItem);
+  newstory = newstory.replaceAll('inserty',yItem);
+  newstory = newstory.replaceAll('insertz',zItem);
 
   if(customName.value !== '') {
     const name = customName.value;
-    
+    newstory = newstory.replaceAll('Elijah', name)
 
   }
 
   if(document.getElementById("uk").checked) {
     const weight = Math.round(300);
     const temperature =  Math.round(94);
+    newstory = newstory.replaceAll('94 fahrenheiit',temperature);
+    newstory = newstory.replaceAll('300 pounds',weight);
 
   }
 
