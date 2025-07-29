@@ -31,6 +31,8 @@ function result() {
   const yItem = randomValueFromArray(placeY);
   const zItem = randomValueFromArray(insertZ);
 
+  newstory = newstory.replaceAll(':insertx:',xItem)
+
   if(customName.value !== '') {
     const name = customName.value;
 
