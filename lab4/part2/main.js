@@ -15,9 +15,13 @@ const alts = {"pic1.jpg":"a zoomed in pic of an eye",
     "pic5.jpg":"a big butter fly"}
 /* Looping through images */
 for(let i=0;i<images.length;i++){
-const newImage = document.createElement('img');
-newImage.setAttribute('src',"./images/"+images[i]);
-newImage.setAttribute('alt', alts[images[i]]);
-thumbBar.appendChild(newImage);
+    const newImage = document.createElement('img');
+    newImage.setAttribute('src',"./images/"+images[i]);
+    newImage.setAttribute('alt', alts[images[i]]);
+    thumbBar.appendChild(newImage);
+    newImage.addEventListener('click',function(f){
+        displayedImage.setAttribute('src',this.src)
+        displayedImage.setAttribute('alt',this.alt)
+    })
 }
 /* Wiring up the Darken/Lighten button */
