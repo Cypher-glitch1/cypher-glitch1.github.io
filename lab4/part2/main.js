@@ -16,8 +16,8 @@ const alts = {"pic1.jpg":"a zoomed in pic of an eye",
 /* Looping through images */
 
 const newImage = document.createElement('img');
-newImage.setAttribute('src', xxx);
-newImage.setAttribute('alt', xxx);
+newImage.setAttribute('src',"./images/"+images[i]);
+newImage.setAttribute('alt', alts[images[i]]);
 thumbBar.appendChild(newImage);
 
 /* Wiring up the Darken/Lighten button */
