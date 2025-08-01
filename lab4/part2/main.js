@@ -14,10 +14,10 @@ const alts = {"pic1.jpg":"a zoomed in pic of an eye",
     "pic4.jpg":"egypt painting",
     "pic5.jpg":"a big butter fly"}
 /* Looping through images */
-
+for(let i=0;i<images.length;i++){
 const newImage = document.createElement('img');
 newImage.setAttribute('src',"./images/"+images[i]);
 newImage.setAttribute('alt', alts[images[i]]);
 thumbBar.appendChild(newImage);
-
+}
 /* Wiring up the Darken/Lighten button */
