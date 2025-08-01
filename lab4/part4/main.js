@@ -25,6 +25,7 @@ class Ball {
     this.velX = velX;
     this.velY = velY;
     this.color = color;
+    this.exists = true;
     this.size = size;
   }
   draw() {
@@ -68,7 +69,7 @@ class Ball {
   }
 }
 
-class EvilCircle extends shape {
+class EvilCircle extends Shape {
   constructor(x, y) {
     super(x, y, 20, 20);
     
@@ -153,6 +154,7 @@ while (balls.length < 25) {
   count++;
   para.textContent = 'ball counter: ' + count;
 }
+const evilball = new EvilCircle(random(0,width), random(0,height));
 
 function loop() {
   ctx.fillStyle = "rgb(0 0 0 / 25%)";
@@ -166,7 +168,11 @@ function loop() {
     }
   }
 
+  evilball.draw();
+  evilball.checkBounds();
+  evilball.collisionDetect();
+
   requestAnimationFrame(loop);
 }
 
-  loop();
+loop();
