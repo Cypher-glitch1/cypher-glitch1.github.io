@@ -15,6 +15,13 @@ showHideBtn.onclick = function() {
     commentWrapper.style.display = 'none';
   }
 };
+showHideBtn.addEventListener('keydown', function(e) {
+  if (e.key === ' ') {
+    e.preventDefault();
+    showHideBtn.click();
+  }
+});
+
 
 // functionality for adding a new comment via the comments form
 
